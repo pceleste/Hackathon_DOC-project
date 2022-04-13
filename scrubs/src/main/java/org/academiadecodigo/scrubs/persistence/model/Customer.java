@@ -17,7 +17,6 @@ public class Customer extends AbstractModel {
     private Integer smoker;
 
 
-
     /**
      * Gets the first name of the customer
      *
@@ -104,7 +103,8 @@ public class Customer extends AbstractModel {
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
-                ", phone='" + phone +
+                ", phone='" + phone + '\'' +
+                ", smoker='" + smoker +
                 "} " + super.toString();
     }
 

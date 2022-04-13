@@ -19,7 +19,6 @@ function fetchCustomers(){
 }
 
     function successCallback(response) {
-        console.log(response);
         populateCustomers(response);
     }
     
@@ -63,11 +62,7 @@ function populateCustomers(customerData) {
 
 
             $('#edit-btn-' + element.id).click(function(){
-            $('#firstName').val(element.firstName), 
-            $('#lastName').val(element.lastName), 
-            $('#email').val(element.email), 
-            $('#phone').val(element.phone)  
-            id=element.id;
+                window.location.assign("edit.html?id="+element.id);
             });
 
             $('#btn-reset' + element.id).click(function(){
@@ -105,16 +100,17 @@ function deleteUser(id) {
 function add() {
 
     $.ajax({
-        url: 'http://localhost:8080/scrubs/api/customer',
+        url: 'http://localhost:8080/scrubs/api/customer/',
         type: 'POST',
         data: JSON.stringify( { 
         firstName: $('#firstName').val(), 
         lastName: $('#lastName').val(), 
         email: $('#email').val(), 
-        phone: $('#phone').val() } ),
+        phone: $('#phone').val(),
+        smoke: $('#smoker').val() } ),
         async: true,
         contentType: "application/json",
-        success: location.reload(),
+        success: fetchCustomers,
     });
 }
 
@@ -127,7 +123,8 @@ function add() {
                  firstName: $('#firstName').val(), 
                  lastName: $('#lastName').val(), 
                  email: $('#email').val(), 
-                  phone: $('#phone').val() 
+                 phone: $('#phone').val(),
+                 smoker: $('input[name="smoker"]:checked').val()
                 }),
             async: true,
             contentType: "application/json",

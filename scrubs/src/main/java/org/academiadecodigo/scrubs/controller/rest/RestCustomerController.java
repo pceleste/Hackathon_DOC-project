@@ -102,7 +102,7 @@ public class RestCustomerController {
      * @param uriComponentsBuilder the uri components builder
      * @return the response entity
      */
-    @RequestMapping(method = RequestMethod.POST, path = {"/form"})
+    @RequestMapping(method = RequestMethod.POST, path = {"/", ""})
     public ResponseEntity<?> addCustomer(@Valid @RequestBody CustomerDto customerDto, BindingResult bindingResult, UriComponentsBuilder uriComponentsBuilder) {
 
         if (bindingResult.hasErrors() || customerDto.getId() != null) {
