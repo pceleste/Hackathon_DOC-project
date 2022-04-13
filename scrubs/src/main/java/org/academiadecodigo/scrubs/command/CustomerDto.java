@@ -32,6 +32,19 @@ public class CustomerDto {
     @NotNull(message = "Mandatory field")
     private Integer smoker;
 
+    @NotNull(message = "Mandatory field")
+    @NotBlank(message = "First name is mandatory")
+    @Size(min = 1, max = 3)
+    private String idade;
+
+    @NotNull(message = "Mandatory field")
+    private String sexo;
+
+    @NotNull(message = "Mandatory field")
+    @NotBlank(message = "First name is mandatory")
+    @Size(min = 3, max = 64)
+    private String profissao;
+
 
     /**
      * Gets the id of the customer DTO
@@ -143,5 +156,29 @@ public class CustomerDto {
 
     public void setSmoker(Integer answer) {
         smoker = answer;
+    }
+
+    public String getIdade() {
+        return idade;
+    }
+
+    public void setIdade(String idade) {
+        this.idade = idade;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public String getProfissao() {
+        return profissao;
+    }
+
+    public void setProfissao(String profissao) {
+        this.profissao = profissao;
     }
 }

@@ -20,26 +20,48 @@
     <script src="js/form.js"></script>
 </head>
 <body>
-
+    <button id="teste">PIXA</button>
     
     <div class="container">
 
-        <h1 class="text-center">New Patient</h1>
+        <h1 class="text-center">Novo Paciente</h1>
         
         <br>
         <form>
 
-            <label> First Name </label>         
+            <label> Primeiro Nome </label>         
             <input type="text" name="firstName" size="15" id="firstName"/>
 
-            <label> Last Name </label>     
+            <label> Ultimo Nome </label>     
             <input type="text" name="lastName" size="15" id="lastName"/> 
+
+            <label> Idade </label>     
+            <input type="text" name="idade" size="15" id="idade"/> 
 
             <label> Email </label>         
             <input type="text" name="email" size="15" id="email"/> 
 
             <label> Phone </label>
             <input type="text" name="phone" size="15" id="phone"/> 
+
+            <label> Profissão </label>
+            <input type="text" name="profissao" size="15" id="profissao"/> 
+
+            <h4>Sexo</h4>
+            <div class="form-check">
+                <label class="form-check-label" for="sexo"></label>
+                    <input class="form-check-input" type="radio" name="sexo" value="M">
+                    Masculino
+                </label>
+                <label class="form-check-label" for="sexo"></label>
+                    <input class="form-check-input" type="radio" name="sexo" value="F">
+                    Feminino
+                </label>
+                <label class="form-check-label" for="sexo"></label>
+                    <input class="form-check-input" type="radio" name="sexo" value="NS" checked>
+                    Sim
+                </label>
+            </div>
 
             <h4>É fumador?</h4>
             <div class="form-check">
@@ -52,10 +74,139 @@
                 Não
                 </label>
             </div>
-            <button type="button" class="btn btn-add" id="btn-add">Add</button>
-        </form>  
-        
-    </div>
+            
 
+            <h3>Dados clinicos</h3>
+
+            <label> Patologias </label>
+            <input type="text" name="p1" size="15" id="patologias"/>
+
+            <label> Que número calça? </label>
+            <input type="text" name="p2" size="15" id="numeroPe"/>
+
+            <h4>Signo</h4>
+            <select class="custom-select" id="signo">
+                <option selected>Escolha uma opção...</option>
+                <option value="1">Aquário</option>
+                <option value="2">Balança</option>
+                <option value="3">Caranguejo</option>
+                <option value="4">Capricornio</option>
+                <option value="5">Carneiro</option>
+                <option value="6">Escorpião</option>
+                <option value="7">Gustavos</option>
+                <option value="8">Leão</option>
+                <option value="9">Sagitário</option>
+                <option value="10">Peixes</option>
+                <option value="11">Touro</option>
+                <option value="12">Virgem</option>
+              </select>
+
+            <h4>Uso de medicamentos</h4>
+            <div class="form-check">
+                <label class="form-check-label" for="meds"></label>
+                <input class="form-check-input" type="radio" name="meds" value="1">
+                Sim
+                </label>
+                <label class="form-check-label" for="meds"></label>
+                <input class="form-check-input" type="radio" name="smoker" value="0" checked>
+                Não
+                </label>
+            </div>
+
+            <label> Quais? </label>
+            <input type="text" name="p4" size="30" id="medicamentos" placeholder="Viagra"/>
+
+            <h4>É sexualmente activo?</h4>
+            <div class="form-check">
+                <label class="form-check-label" for="sexoActivo"></label>
+                <input class="form-check-input" type="radio" name="sexoActivo" value="1">
+                Sim
+                </label>
+                <label class="form-check-label" for="sexoActivo"></label>
+                <input class="form-check-input" type="radio" name="sexoActivo" value="0" checked>
+                Não
+                </label>
+
+                <select class="custom-select" id="sexoSemana">
+                    <option selected>Escolha uma opção...</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">Não exagere...</option>
+                  </select>
+            </div>
+
+            <h4>Quantos parceiros já teve?</h4>
+            <select class="custom-select" id="parceiros">
+                <option selected>Escolha uma opção...</option>
+                <option value="1">Mão</option>
+                <option value="2">0-2</option>
+                <option value="3">2-6</option>
+                <option value="4">7-10</option>
+                <option value="5">Mais de 10</option>
+              </select>
+
+            <h4>Já praticou relações sexuais de forma não católica? (Sexo anal passivo)</h4>
+            <div class="form-check">
+                <label class="form-check-label" for="anal"></label>
+                <input class="form-check-input" type="radio" name="anal" value="1">
+                Sim
+                </label>
+            </div>
+
+            <h4>Usa proteção?</h4>
+            <div class="form-check">
+                <label class="form-check-label" for="protecao"></label>
+                <input class="form-check-input" type="radio" name="protecao" value="1">
+                Sim
+                </label>
+                <label class="form-check-label" for="protecao"></label>
+                <input class="form-check-input" type="radio" name="protecao" value="0">
+                Não
+                </label>
+                <label class="form-check-label" for="protecao"></label>
+                <input class="form-check-input" type="radio" name="protecao" value="2">
+                Tiro antes!
+                </label>
+                <label class="form-check-label" for="protecao"></label>
+                <input class="form-check-input" type="radio" name="protecao" value="3">
+                Jogo LOL
+                </label>
+            </div>
+
+            <label> Onde fica o Clitóris? </label>
+            <input type="text" name="p4" size="30" id="clitoris" placeholder="O que é isso?"/>
+
+            <h4>Número de bebidas alcoólicas consumidas por semana (copo)?</h4>
+            <div class="form-check">
+                <label class="form-check-label" for="bebidas"></label>
+                <input class="form-check-input" type="radio" name="bebidas" value="1">
+                Sim
+                </label>
+                <label class="form-check-label" for="bebidas"></label>
+                <input class="form-check-input" type="radio" name="bebidas" value="0">
+                Não
+                </label>
+                <label class="form-check-label" for="bebidas"></label>
+                <input class="form-check-input" type="radio" name="bebidas" value="2">
+                Tiro antes!
+                </label>
+                <label class="form-check-label" for="bebidas"></label>
+                <input class="form-check-input" type="radio" name="bebidas" value="3">
+                Jogo LOL
+                </label>
+            </div>
+        </form>  
+
+        <br>
+        <button type="button" class="btn btn-add" id="btn-add">Add</button>
+    </div>
+    
 
 </body>

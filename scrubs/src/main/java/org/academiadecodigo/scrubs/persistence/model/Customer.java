@@ -12,8 +12,11 @@ public class Customer extends AbstractModel {
 
     private String firstName;
     private String lastName;
+    private String idade;
     private String email;
     private String phone;
+    private String sexo;
+    private String profissao;
     private Integer smoker;
 
 
@@ -102,10 +105,12 @@ public class Customer extends AbstractModel {
         return "Customer{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", idade='" + idade + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
-                ", smoker='" + smoker +
-                "} " + super.toString();
+                ", sexo='" + sexo + '\'' +
+                ", profissao='" + profissao + '\'' +
+                ", smoker=" + smoker + "}" + super.toString();
     }
 
     public Integer getSmoker() {
@@ -115,7 +120,28 @@ public class Customer extends AbstractModel {
     public void setSmoker(Integer smoker) {
         this.smoker = smoker;
     }
+
+    public String getIdade() {
+        return idade;
+    }
+
+    public void setIdade(String idade) {
+        this.idade = idade;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public String getProfissao() {
+        return profissao;
+    }
+
+    public void setProfissao(String profissao) {
+        this.profissao = profissao;
+    }
 }
-
-
-

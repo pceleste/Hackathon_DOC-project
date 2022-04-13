@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
         crossorigin="anonymous">
 
-    <script src="js/form.js"></script>
+    <script src="js/edit.js"></script>
 </head>
 <body>
 
@@ -29,17 +29,39 @@
         <br>
         <form>
 
-            <label> First Name </label>         
+            <label> Primeiro Nome </label>         
             <input type="text" name="firstName" size="15" id="firstName"/>
 
-            <label> Last Name </label>     
+            <label> Ultimo Nome </label>     
             <input type="text" name="lastName" size="15" id="lastName"/> 
+
+            <label> Idade </label>     
+            <input type="text" name="idade" size="15" id="idade"/> 
 
             <label> Email </label>         
             <input type="text" name="email" size="15" id="email"/> 
 
             <label> Phone </label>
             <input type="text" name="phone" size="15" id="phone"/> 
+
+            <label> Profissão </label>
+            <input type="text" name="profissao" size="15" id="profissao"/> 
+
+            <h4>Sexo</h4>
+            <div class="form-check">
+                <label class="form-check-label" for="sexo"></label>
+                    <input id="sexo_m" class="form-check-input" type="radio" name="sexo" value="M">
+                    Masculino
+                </label>
+                <label class="form-check-label" for="sexo"></label>
+                    <input id="sexo_f" class="form-check-input" type="radio" name="sexo" value="F">
+                    Feminino
+                </label>
+                <label class="form-check-label" for="sexo"></label>
+                    <input id="sexo_sim" class="form-check-input" type="radio" name="sexo" value="NS" checked>
+                    Sim
+                </label>
+            </div>
 
             <h4>É fumador?</h4>
             <div class="form-check">
@@ -52,8 +74,10 @@
                 Não
                 </label>
             </div>
-            <button type="button" class="btn btn-add" id="btn-add">Add</button>
-        </form>  
+            <button type="button" class="btn btn-add" id="btn-edit">UPDATE</button>
+
+            
+        </form>   
         
     </div>
 
