@@ -40,6 +40,7 @@ public class CustomerDtoToCustomer implements Converter<CustomerDto, Customer> {
         customer.setLastName(customerDto.getLastName());
         customer.setEmail(customerDto.getEmail());
         customer.setPhone(customerDto.getPhone());
+        customer.setSmoker(customerDto.getSmoker());
 
         return customer;
     }

@@ -14,6 +14,7 @@ public class Customer extends AbstractModel {
     private String lastName;
     private String email;
     private String phone;
+    private Integer smoker;
 
 
 
@@ -105,6 +106,14 @@ public class Customer extends AbstractModel {
                 ", email='" + email + '\'' +
                 ", phone='" + phone +
                 "} " + super.toString();
+    }
+
+    public Integer getSmoker() {
+        return smoker;
+    }
+
+    public void setSmoker(Integer smoker) {
+        this.smoker = smoker;
     }
 }
 

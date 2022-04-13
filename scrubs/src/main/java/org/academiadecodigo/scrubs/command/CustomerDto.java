@@ -16,8 +16,8 @@ public class CustomerDto {
     @Size(min = 3, max = 64)
     private String firstName;
 
-    @NotNull(message = "First name is mandatory")
-    @NotBlank(message = "First name is mandatory")
+    @NotNull(message = "Last name is mandatory")
+    @NotBlank(message = "Last name is mandatory")
     @Size(min = 3, max = 64)
     private String lastName;
 
@@ -28,6 +28,10 @@ public class CustomerDto {
     @Pattern(regexp = "^\\+?[0-9]*$", message = "Phone number contains invalid characters")
     @Size(min = 9, max = 16)
     private String phone;
+
+    @NotNull(message = "Mandatory field")
+    private Integer smoker;
+
 
     /**
      * Gets the id of the customer DTO
@@ -131,5 +135,13 @@ public class CustomerDto {
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
                 '}';
+    }
+
+    public Integer getSmoker() {
+        return smoker;
+    }
+
+    public void setSmoker(Integer answer) {
+        smoker = answer;
     }
 }

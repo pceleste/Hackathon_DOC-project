@@ -17,6 +17,7 @@
                 <th>Last Name</th>
                 <th>Email</th>
                 <th>Phone</th>
+                <th>Smoker</th>
                 <th>Show</th>
                 <th>Edit</th>
                 <th>Delete</th>
@@ -27,6 +28,7 @@
                 <td th:text="${customer.lastName}"></td>
                 <td th:text="${customer.email}"></td>
                 <td th:text="${customer.phone}"></td>
+                <td th:text="${customer.smoker}"></td>
                 <td><a class="btn btn-success" th:href="@{'/customer/' + ${customer.id}}">View</a></td>
                 <td><a class="btn btn-warning" th:href="@{'/customer/' + ${customer.id} + '/edit'}">Edit</a></td>
                 <td><a class="btn btn-danger" th:href="@{'/customer/' + ${customer.id} + '/delete'}">Delete</a></td>
