@@ -2,9 +2,6 @@ $(document).on("click", "#btn-add", function(){
     add();
 });
 
-var rollSound = new Audio("./teste.mp3");
-$('#teste').click(e => rollSound.play());
-
 function add() {
 
     $.ajax({
@@ -15,12 +12,30 @@ function add() {
             lastName: $('#lastName').val(), 
             email: $('#email').val(), 
             phone: $('#phone').val(),
-            sexo: $('input[name="sexo"]:checked').val(),
+            sexo: $('#sexo').val(),
             profissao: $('#profissao').val(),
             idade: $('#idade').val(),
-            smoker: $('input[name="smoker"]:checked').val() } ),
+            numeroPe: $('#numeroPe').val(),
+            signo: $('#signo').val(),
+            patologias: $('#patologias').val(),
+            meds: $('input[name="meds"]:checked').val(),
+            sexoActivo: $('input[name="sexoActivo"]:checked').val(),
+            sexoSemana: $('#sexoSemana').val(),
+            parceiros: $('#parceiros').val(),
+            anal: $('input[name="anal"]:checked').val(),
+            protecao: $('#protecao').val(),
+            clitoris: $('#clitoris').val(),
+            bebidas: $('#bebidas').val(),
+            smoker: $('#smoker').val(),
+            cigars: $('input[name="cigars"]:checked').val(),
+            drugs: $('#cornos').val(),
+            quais: $('#quais').val(),
+            cornos: $('#cornos').val(),
+            alimentacao: $('#alimentacao').val()
+
+         } ),
         async: true,
         contentType: "application/json",
-        success: window.location.assign("index.html")
+        success: console.log($('#profissao').val())//window.location.assign("index.html")
     });
 }

@@ -24,7 +24,7 @@
     
     <div class="container">
 
-        <h1 class="text-center">New Patient</h1>
+        <h1 class="text-center">Editar Paciente</h1>
         
         <br>
         <form>
@@ -48,36 +48,178 @@
             <input type="text" name="profissao" size="15" id="profissao"/> 
 
             <h4>Sexo</h4>
-            <div class="form-check">
-                <label class="form-check-label" for="sexo"></label>
-                    <input id="sexo_m" class="form-check-input" type="radio" name="sexo" value="M">
-                    Masculino
-                </label>
-                <label class="form-check-label" for="sexo"></label>
-                    <input id="sexo_f" class="form-check-input" type="radio" name="sexo" value="F">
-                    Feminino
-                </label>
-                <label class="form-check-label" for="sexo"></label>
-                    <input id="sexo_sim" class="form-check-input" type="radio" name="sexo" value="NS" checked>
-                    Sim
-                </label>
-            </div>
+            <select class="custom-select" id="sexo">
+                <option selected>Escolha uma opção...</option>
+                <option value="M">Masculino</option>
+                <option value="F">Feminino</option>
+                <option value="NS">Sim</option>
+              </select>
 
-            <h4>É fumador?</h4>
+
+            <h3>Dados clinicos</h3>
+
+            <label> Patologias </label>
+            <input type="text" name="p1" size="15" id="patologias"/>
+
+            <br>
+
+            <label> Que número calça? </label>
+            <input type="text" name="p2" size="15" id="numeroPe"/>
+
+            <h4>Signo</h4>
+            <select class="custom-select" id="signo">
+                <option selected>Escolha uma opção...</option>
+                <option value="1">Aquário</option>
+                <option value="2">Balança</option>
+                <option value="3">Caranguejo</option>
+                <option value="4">Capricornio</option>
+                <option value="5">Carneiro</option>
+                <option value="6">Escorpião</option>
+                <option value="7">Gustavos</option>
+                <option value="8">Leão</option>
+                <option value="9">Sagitário</option>
+                <option value="10">Peixes</option>
+                <option value="11">Touro</option>
+                <option value="12">Virgem</option>
+              </select>
+
+            <h4>Uso de medicamentos</h4>
             <div class="form-check">
-                <label class="form-check-label" for="smoke"></label>
-                <input id="smoker_sim" class="form-check-input" type="radio" name="smoker" value="1">
+                <label class="form-check-label" for="meds"></label>
+                <input id="meds_sim" class="form-check-input" type="radio" name="meds" value="1">
                 Sim
                 </label>
-                <label class="form-check-label" for="smoke"></label>
-                <input id="smoker_nao" class="form-check-input" type="radio" name="smoker" value="0" checked>
+                <label class="form-check-label" for="meds"></label>
+                <input id="meds_nao" class="form-check-input" type="radio" name="meds" value="0" checked>
                 Não
                 </label>
             </div>
-            <button type="button" class="btn btn-add" id="btn-edit">UPDATE</button>
+
+            <h4>É sexualmente activo?</h4>
+            <div class="form-check">
+                <label class="form-check-label" for="sexoActivo"></label>
+                <input class="form-check-input" type="radio" name="sexoActivo" value="1">
+                Sim
+                </label>
+                <label class="form-check-label" for="sexoActivo"></label>
+                <input class="form-check-input" type="radio" name="sexoActivo" value="0" checked>
+                Não
+                </label>
+
+                <select class="custom-select" id="sexoSemana">
+                    <option selected>Quantas vezes por semana?</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">Não exagere...</option>
+                  </select>
+            </div>
+
+            <h4>Quantos parceiros já teve?</h4>
+            <select class="custom-select" id="parceiros">
+                <option selected>Escolha uma opção...</option>
+                <option value="1">Mão</option>
+                <option value="2">0-2</option>
+                <option value="3">2-6</option>
+                <option value="4">7-10</option>
+                <option value="5">Mais de 10</option>
+              </select>
+
+            <h4>Já praticou relações sexuais de forma não católica? (Sexo anal passivo)</h4>
+            <div class="form-check">
+                <label class="form-check-label" for="anal"></label>
+                <input id="anal" class="form-check-input" type="radio" name="anal" value="1">
+                Sim
+                </label>
+            </div>
+
+            <h4>Usa proteção?</h4>
+            <div class="form-check">
+                <select class="custom-select" id="protecao">
+                    <option selected>Escolha uma opção...</option>
+                    <option value="0">Não</option>
+                    <option value="1">Sim</option>
+                    <option value="2">Tiro Antes</option>
+                    <option value="3">Jogo LoL</option>
+                  </select>
+            </div>
+
+            <label> Onde fica o Clitóris? </label>
+            <input type="text" name="p4" size="30" id="clitoris" placeholder="O que é isso?"/>
+
+            <h4>Número de bebidas alcoólicas consumidas por semana (copo)?</h4>
+            <select class="custom-select" id="bebidas">
+                <option selected>Escolha uma opção...</option>
+                <option value="1">0-2</option>
+                <option value="2">2-6</option>
+                <option value="3">Mais de 6</option>
+              </select>
+
+            <h4>É fumador?</h4>
+            <select class="custom-select" id="smoker">
+                <option selected>Escolha uma opção...</option>
+                <option value="0">Não</option>
+                <option value="1">Sim</option>
+            </select>
+
+            <h4>Número de cigarros por dia?</h4>
+            <div class="form-check">
+                <label class="form-check-label" for="cigars"></label>
+                <input id="cig_1" class="form-check-input" type="radio" name="cigars" value="0">
+                1-5
+                </label>
+                <label class="form-check-label" for="cigars"></label>
+                <input id="cig_2" class="form-check-input" type="radio" name="cigars" value="1">
+                6-10
+                </label>
+                <label class="form-check-label" for="cigars"></label>
+                <input id="cig_3" class="form-check-input" type="radio" name="cigars" value="2">
+                11-20
+                </label>
+                <label class="form-check-label" for="cigars"></label>
+                <input id="cig_4" class="form-check-input" type="radio" name="cigars" value="3">
+                20+
+                </label>
+            </div>
+
+            <h4>Consome estupefacientes?</h4>
+            <select class="custom-select" id="drugs">
+                <option selected>Escolha uma opção...</option>
+                <option value="0">Sim!</option>
+                <option value="1">Não</option>
+            </select>
+            <input type="text" name="p9" size="30" id="quais"/>
+
+            <h4>Foi lhe oferecido por parte do namorado/a um par de cornos?</h4>
+            <select class="custom-select" id="cornos">
+                <option selected>Escolha uma opção...</option>
+                <option value="0">Sim!</option>
+                <option value="1">Não</option>
+                <option value="2">Já perdi a conta</option>
+            </select>
+
+            <h3>Hábitos Alimentares</h3>
+            <h4>Regime alimentar</h4>
+            <select class="custom-select" id="alimentacao">
+                <option selected>Escolha uma opção...</option>
+                <option value="1">Omnivoro</option>
+                <option value="2">Vegetariano/Vegano</option>
+                <option value="3">Carnivero</option>
+                <option value="4">Outro</option>
+            </select>
+
+
+            <button type="button" class="btn btn-add" id="btn-edit">ATUALIZAR</button>
 
             
         </form>   
+
         
     </div>
 

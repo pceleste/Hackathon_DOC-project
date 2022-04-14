@@ -4,150 +4,127 @@ import org.academiadecodigo.scrubs.persistence.model.Customer;
 
 import javax.validation.constraints.*;
 
-/**
- * The {@link Customer} data transfer object
- */
 public class CustomerDto {
 
     private Integer id;
 
-    @NotNull(message = "First name is mandatory")
-    @NotBlank(message = "First name is mandatory")
-    @Size(min = 3, max = 64)
+    //@NotBlank(message = "Primeiro Nome é obrigatório!")
+    //@Size(min = 3, max = 64)
     private String firstName;
 
-    @NotNull(message = "Last name is mandatory")
-    @NotBlank(message = "Last name is mandatory")
-    @Size(min = 3, max = 64)
+    //@NotBlank(message = "Ultimo Nome é obrigatório!")
+    //@Size(min = 3, max = 64)
     private String lastName;
 
-    @Email
-    @NotBlank(message = "Email is mandatory")
+    //@Email
+    //@NotBlank(message = "Email é obrigatório!")
     private String email;
 
-    @Pattern(regexp = "^\\+?[0-9]*$", message = "Phone number contains invalid characters")
-    @Size(min = 9, max = 16)
+    //@Pattern(regexp = "^\\+?[0-9]*$", message = "Contém caracteres inválidos, apenas números")
+    //@Size(min = 9, max = 16)
     private String phone;
 
-    @NotNull(message = "Mandatory field")
+    //@NotBlank(message = "Campo obrigatório!")
     private Integer smoker;
 
-    @NotNull(message = "Mandatory field")
-    @NotBlank(message = "First name is mandatory")
-    @Size(min = 1, max = 3)
+    //@NotBlank(message = "Campo obrigatório!")
+    //@Size(min = 1, max = 3)
     private String idade;
 
-    @NotNull(message = "Mandatory field")
+    //@NotNull(message = "Campo obrigatório!")
     private String sexo;
 
-    @NotNull(message = "Mandatory field")
-    @NotBlank(message = "First name is mandatory")
-    @Size(min = 3, max = 64)
+    //@NotBlank(message = "Me deixas saber no que trabalhas")
+    //@Size(min = 3, max = 64)
     private String profissao;
 
+    //@NotBlank(message = "Campo obrigatório!")
+    private Integer numeroPe;
 
-    /**
-     * Gets the id of the customer DTO
-     *
-     * @return the customer DTO id
-     */
+    //@NotBlank(message = "Campo obrigatório!")
+    private String signo;
+
+    //@NotBlank(message = "Campo obrigatório!")
+    private String patologias;
+
+    //@NotNull(message = "Campo obrigatório!")
+    private Integer meds;
+
+    //@NotBlank(message = "Campo obrigatório!")
+    private Integer sexoActivo;
+
+    //@NotNull(message = "Campo obrigatório!")
+    private Integer sexoSemana;
+
+    //@NotBlank(message = "Campo obrigatório!")
+    private Integer parceiros;
+
+    //@NotBlank(message = "Campo obrigatório!")
+    private Integer anal;
+
+    //@NotBlank(message = "Campo obrigatório!")
+    private Integer protecao;
+
+    //@NotBlank(message = "Campo obrigatório!")
+    private String clitoris;
+
+    //@NotNull(message = "Campo obrigatório!")
+    private Integer bebidas;
+
+    //@NotNull(message = "Campo obrigatório!")
+    private Integer cigars;
+
+    //@NotBlank(message = "Campo obrigatório!")
+    private Integer drugs;
+
+    //@NotBlank(message = "Campo obrigatório!")
+    private String quais;
+
+    //@NotNull(message = "Campo obrigatório!")
+    private Integer cornos;
+
+    //@NotNull(message = "Campo obrigatório!")
+    private Integer alimentacao;
+
+
     public Integer getId() {
         return id;
     }
 
-    /**
-     * Sets the id of the customer DTO
-     *
-     * @param id the id to set
-     */
     public void setId(Integer id) {
         this.id = id;
     }
 
-    /**
-     * Gets the first name of the customer DTO
-     *
-     * @return the customer DTO first name
-     */
     public String getFirstName() {
         return firstName;
     }
 
-    /**
-     * Sets the first name of the customer DTO
-     *
-     * @param firstName the first name to set
-     */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    /**
-     * Gets the last name of the customer DTO
-     *
-     * @return the customer DTO last name
-     */
     public String getLastName() {
         return lastName;
     }
 
-    /**
-     * Sets the last name of the customer DTO
-     *
-     * @param lastName the last name to set
-     */
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    /**
-     * Gets the email of the customer DTO
-     *
-     * @return the customer DTO email
-     */
     public String getEmail() {
         return email;
     }
 
-    /**
-     * Sets the email of the customer DTO
-     *
-     * @param email the email to set
-     */
     public void setEmail(String email) {
         this.email = email;
     }
 
-    /**
-     * Gets the phone of the customer DTO
-     *
-     * @return the customer DTO phone
-     */
     public String getPhone() {
         return phone;
     }
 
-    /**
-     * Sets the phone of the customer DTP
-     *
-     * @param phone the phone to set
-     */
     public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-    /**
-     * @see Object#toString()
-     */
-    @Override
-    public String toString() {
-        return "CustomerForm{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", phone='" + phone + '\'' +
-                '}';
     }
 
     public Integer getSmoker() {
@@ -180,5 +157,165 @@ public class CustomerDto {
 
     public void setProfissao(String profissao) {
         this.profissao = profissao;
+    }
+
+    public Integer getNumeroPe() {
+        return numeroPe;
+    }
+
+    public void setNumeroPe(Integer numeroPe) {
+        this.numeroPe = numeroPe;
+    }
+
+    public String getSigno() {
+        return signo;
+    }
+
+    public void setSigno(String signo) {
+        this.signo = signo;
+    }
+
+    public String getPatologias() {
+        return patologias;
+    }
+
+    public void setPatologias(String patologias) {
+        this.patologias = patologias;
+    }
+
+    public Integer getMeds() {
+        return meds;
+    }
+
+    public void setMeds(Integer meds) {
+        this.meds = meds;
+    }
+
+    public Integer getSexoActivo() {
+        return sexoActivo;
+    }
+
+    public void setSexoActivo(Integer sexoActivo) {
+        this.sexoActivo = sexoActivo;
+    }
+
+    public Integer getSexoSemana() {
+        return sexoSemana;
+    }
+
+    public void setSexoSemana(Integer sexoSemana) {
+        this.sexoSemana = sexoSemana;
+    }
+
+    public Integer getParceiros() {
+        return parceiros;
+    }
+
+    public void setParceiros(Integer parceiros) {
+        this.parceiros = parceiros;
+    }
+
+    public Integer getAnal() {
+        return anal;
+    }
+
+    public void setAnal(Integer anal) {
+        this.anal = anal;
+    }
+
+    public Integer getProtecao() {
+        return protecao;
+    }
+
+    public void setProtecao(Integer protecao) {
+        this.protecao = protecao;
+    }
+
+    public String getClitoris() {
+        return clitoris;
+    }
+
+    public void setClitoris(String clitoris) {
+        this.clitoris = clitoris;
+    }
+
+    public Integer getBebidas() {
+        return bebidas;
+    }
+
+    public void setBebidas(Integer bebidas) {
+        this.bebidas = bebidas;
+    }
+
+    public Integer getCigars() {
+        return cigars;
+    }
+
+    public void setCigars(Integer cigars) {
+        this.cigars = cigars;
+    }
+
+    public Integer getDrugs() {
+        return drugs;
+    }
+
+    public void setDrugs(Integer drugs) {
+        this.drugs = drugs;
+    }
+
+    public String getQuais() {
+        return quais;
+    }
+
+    public void setQuais(String quais) {
+        this.quais = quais;
+    }
+
+    public Integer getCornos() {
+        return cornos;
+    }
+
+    public void setCornos(Integer cornos) {
+        this.cornos = cornos;
+    }
+
+    public Integer getAlimentacao() {
+        return alimentacao;
+    }
+
+    public void setAlimentacao(Integer alimentacao) {
+        this.alimentacao = alimentacao;
+    }
+
+
+    @Override
+    public String toString() {
+        return "CustomerDto{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", idade='" + idade + '\'' +
+                ", sexo='" + sexo + '\'' +
+                ", profissao='" + profissao + '\'' +
+                ", smoker=" + smoker +
+                ", numeroPe=" + numeroPe +
+                ", signo='" + signo + '\'' +
+                ", patologias='" + patologias + '\'' +
+                ", meds=" + meds +
+                ", sexoActivo=" + sexoActivo +
+                ", sexoSemana=" + sexoSemana +
+                ", parceiros=" + parceiros +
+                ", anal=" + anal +
+                ", protecao=" + protecao +
+                ", clitoris='" + clitoris + '\'' +
+                ", bebidas=" + bebidas +
+                ", cigars=" + cigars +
+                ", drugs=" + drugs +
+                ", quais='" + quais + '\'' +
+                ", cornos='" + cornos + '\'' +
+                ", alimentacao=" + alimentacao +
+                '}' + super.toString();
     }
 }

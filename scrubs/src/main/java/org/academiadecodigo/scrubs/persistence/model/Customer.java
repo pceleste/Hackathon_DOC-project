@@ -1,11 +1,7 @@
 package org.academiadecodigo.scrubs.persistence.model;
 
-
 import javax.persistence.*;
 
-/**
- * The customer model entity
- */
 @Entity
 @Table(name = "customer")
 public class Customer extends AbstractModel {
@@ -18,99 +14,53 @@ public class Customer extends AbstractModel {
     private String sexo;
     private String profissao;
     private Integer smoker;
+    private Integer numeroPe;
+    private String patologias;
+    private String signo;
+    private Integer meds;
+    private Integer sexoActivo;
+    private Integer sexoSemana;
+    private Integer parceiros;
+    private Integer anal;
+    private Integer protecao;
+    private String clitoris;
+    private Integer bebidas;
+    private Integer cigars;
+    private Integer drugs;
+    private String quais;
+    private Integer cornos;
+    private Integer alimentacao;
 
-
-    /**
-     * Gets the first name of the customer
-     *
-     * @return the customer last name
-     */
     public String getFirstName() {
         return firstName;
     }
 
-    /**
-     * Sets the first name of the customer
-     *
-     * @param firstName the name to set
-     */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    /**
-     * Gets the last name of the customer
-     *
-     * @return the customer last name
-     */
     public String getLastName() {
         return lastName;
     }
 
-    /**
-     * Sets the last name of the customer
-     *
-     * @param lastName the name to set
-     */
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    /**
-     * Gets the email of the customer
-     *
-     * @return the customer email
-     */
     public String getEmail() {
         return email;
     }
 
-    /**
-     * Sets the email of the customer
-     *
-     * @param email the email to set
-     */
     public void setEmail(String email) {
         this.email = email;
     }
 
-    /**
-     * Gets the phone of the customer
-     *
-     * @return the customer phone
-     */
     public String getPhone() {
         return phone;
     }
 
-    /**
-     * Sets the phone of the customer
-     *
-     * @param phone the phone to set
-     */
     public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-
-
-    /**
-     * @see Object#toString()
-     */
-    @Override
-    public String toString() {
-
-        // printing recipients with lazy loading
-        // and no session will cause issues
-        return "Customer{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", idade='" + idade + '\'' +
-                ", email='" + email + '\'' +
-                ", phone='" + phone + '\'' +
-                ", sexo='" + sexo + '\'' +
-                ", profissao='" + profissao + '\'' +
-                ", smoker=" + smoker + "}" + super.toString();
     }
 
     public Integer getSmoker() {
@@ -143,5 +93,164 @@ public class Customer extends AbstractModel {
 
     public void setProfissao(String profissao) {
         this.profissao = profissao;
+    }
+
+    public Integer getNumeroPe() {
+        return numeroPe;
+    }
+
+    public void setNumeroPe(Integer numeroPe) {
+        this.numeroPe = numeroPe;
+    }
+
+    public String getPatologias() {
+        return patologias;
+    }
+
+    public void setPatologias(String patologias) {
+        this.patologias = patologias;
+    }
+
+    public String getSigno() {
+        return signo;
+    }
+
+    public void setSigno(String signo) {
+        this.signo = signo;
+    }
+
+    public Integer getMeds() {
+        return meds;
+    }
+
+    public void setMeds(Integer meds) {
+        this.meds = meds;
+    }
+
+    public Integer getSexoActivo() {
+        return sexoActivo;
+    }
+
+    public void setSexoActivo(Integer sexoActivo) {
+        this.sexoActivo = sexoActivo;
+    }
+
+    public Integer getSexoSemana() {
+        return sexoSemana;
+    }
+
+    public void setSexoSemana(Integer sexoSemana) {
+        this.sexoSemana = sexoSemana;
+    }
+
+    public Integer getParceiros() {
+        return parceiros;
+    }
+
+    public void setParceiros(Integer parceiros) {
+        this.parceiros = parceiros;
+    }
+
+    public Integer getAnal() {
+        return anal;
+    }
+
+    public void setAnal(Integer anal) {
+        this.anal = anal;
+    }
+
+    public Integer getProtecao() {
+        return protecao;
+    }
+
+    public void setProtecao(Integer protecao) {
+        this.protecao = protecao;
+    }
+
+    public String getClitoris() {
+        return clitoris;
+    }
+
+    public void setClitoris(String clitoris) {
+        this.clitoris = clitoris;
+    }
+
+    public Integer getBebidas() {
+        return bebidas;
+    }
+
+    public void setBebidas(Integer bebidas) {
+        this.bebidas = bebidas;
+    }
+
+    public Integer getCigars() {
+        return cigars;
+    }
+
+    public void setCigars(Integer cigars) {
+        this.cigars = cigars;
+    }
+
+    public Integer getDrugs() {
+        return drugs;
+    }
+
+    public void setDrugs(Integer drugs) {
+        this.drugs = drugs;
+    }
+
+    public String getQuais() {
+        return quais;
+    }
+
+    public void setQuais(String quais) {
+        this.quais = quais;
+    }
+
+    public Integer getCornos() {
+        return cornos;
+    }
+
+    public void setCornos(Integer cornos) {
+        this.cornos = cornos;
+    }
+
+    public Integer getAlimentacao() {
+        return alimentacao;
+    }
+
+    public void setAlimentacao(Integer alimentacao) {
+        this.alimentacao = alimentacao;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", idade='" + idade + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", sexo='" + sexo + '\'' +
+                ", profissao='" + profissao + '\'' +
+                ", smoker=" + smoker +
+                ", numeroPe=" + numeroPe +
+                ", signo='" + signo + '\'' +
+                ", patologias='" + patologias + '\'' +
+                ", meds=" + meds +
+                ", sexoActivo=" + sexoActivo +
+                ", sexoSemana=" + sexoSemana +
+                ", parceiros=" + parceiros +
+                ", anal=" + anal +
+                ", protecao=" + protecao +
+                ", clitoris='" + clitoris + '\'' +
+                ", bebidas=" + bebidas +
+                ", cigars=" + cigars +
+                ", drugs=" + drugs +
+                ", quais='" + quais + '\'' +
+                ", cornos='" + cornos + '\'' +
+                ", alimentacao=" + alimentacao +
+                '}' + super.toString();
     }
 }

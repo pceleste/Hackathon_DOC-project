@@ -76,6 +76,8 @@ function populateCustomers(customerData) {
             $('#remove-btn-' + element.id).click(function() {
                 deleteUser(element.id);
              });
+             console.log("teste")
+             console.log(customerData)
         });
     }
              
@@ -97,39 +99,39 @@ function deleteUser(id) {
     });
 }
 
-function add() {
+// function add() {
 
-    $.ajax({
-        url: 'http://localhost:8080/scrubs/api/customer/',
-        type: 'POST',
-        data: JSON.stringify( { 
-        firstName: $('#firstName').val(), 
-        lastName: $('#lastName').val(), 
-        email: $('#email').val(), 
-        phone: $('#phone').val(),
-        smoke: $('#smoker').val() } ),
-        async: true,
-        contentType: "application/json",
-        success: fetchCustomers,
-    });
-}
+//     $.ajax({
+//         url: 'http://localhost:8080/scrubs/api/customer/',
+//         type: 'POST',
+//         data: JSON.stringify( { 
+//         firstName: $('#firstName').val(), 
+//         lastName: $('#lastName').val(), 
+//         email: $('#email').val(), 
+//         phone: $('#phone').val(),
+//         smoke: $('#smoker').val() } ),
+//         async: true,
+//         contentType: "application/json",
+//         success: fetchCustomers,
+//     });
+// }
 
-    function edit(id) {
+//     function edit(id) {
 
-        $.ajax({
-            url: 'http://localhost:8080/scrubs/api/customer/' + id,
-            type: 'PUT',
-            data: JSON.stringify( { 
-                 firstName: $('#firstName').val(), 
-                 lastName: $('#lastName').val(), 
-                 email: $('#email').val(), 
-                 phone: $('#phone').val(),
-                 smoker: $('input[name="smoker"]:checked').val()
-                }),
-            async: true,
-            contentType: "application/json",
-        });
-}
+//         $.ajax({
+//             url: 'http://localhost:8080/scrubs/api/customer/' + id,
+//             type: 'PUT',
+//             data: JSON.stringify( { 
+//                  firstName: $('#firstName').val(), 
+//                  lastName: $('#lastName').val(), 
+//                  email: $('#email').val(), 
+//                  phone: $('#phone').val(),
+//                  smoker: $('input[name="smoker"]:checked').val()
+//                 }),
+//             async: true,
+//             contentType: "application/json",
+//         });
+// }
 
 
 

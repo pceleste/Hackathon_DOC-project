@@ -7,30 +7,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
-/**
- * A {@link Converter} implementation, responsible for {@link CustomerDto} to {@link Customer} type conversion
- */
 @Component
 public class CustomerDtoToCustomer implements Converter<CustomerDto, Customer> {
 
     private CustomerService customerService;
 
-    /**
-     * Sets the customer service
-     *
-     * @param customerService the customer service to set
-     */
     @Autowired
     public void setCustomerService(CustomerService customerService) {
         this.customerService = customerService;
     }
 
-    /**
-     * Converts the customer DTO into a customer model object
-     *
-     * @param customerDto the customer DTO
-     * @return the customer
-     */
     @Override
     public Customer convert(CustomerDto customerDto) {
 
@@ -44,6 +30,22 @@ public class CustomerDtoToCustomer implements Converter<CustomerDto, Customer> {
         customer.setSexo(customerDto.getSexo());
         customer.setProfissao(customerDto.getProfissao());
         customer.setSmoker(customerDto.getSmoker());
+        customer.setNumeroPe(customerDto.getNumeroPe());
+        customer.setSigno(customerDto.getSigno());
+        customer.setPatologias(customerDto.getPatologias());
+        customer.setMeds(customerDto.getMeds());
+        customer.setSexoActivo(customerDto.getSexoActivo());
+        customer.setSexoSemana(customerDto.getSexoSemana());
+        customer.setParceiros(customerDto.getParceiros());
+        customer.setAnal(customerDto.getAnal());
+        customer.setProtecao(customerDto.getProtecao());
+        customer.setClitoris(customerDto.getClitoris());
+        customer.setBebidas(customerDto.getBebidas());
+        customer.setCigars(customerDto.getCigars());
+        customer.setDrugs(customerDto.getDrugs());
+        customer.setQuais(customerDto.getQuais());
+        customer.setCornos(customerDto.getCornos());
+        customer.setAlimentacao(customerDto.getAlimentacao());
 
         return customer;
     }
