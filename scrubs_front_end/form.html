@@ -1,23 +1,52 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>SCRUBS</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="generator" content="Bootply" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
         crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
         crossorigin="anonymous">
-
     <script src="js/form.js"></script>
+    <style>
+.Header{
+    background-color: #00995D;
+    color: white;
+    border-top: #028551 2 px solid;
+    border-bottom: #028551 5px solid;
+}
+.block{
+    display: block;
+}
+h3{
+    background-color: #00995D;
+    color: white;
+    text-align: center;border-top: #028551 1 px solid;
+}
+h4{
+    font-size: 14px;
+}
+.center {
+display: flex;
+justify-content: space-evenly;  
+columns: 3;
+}
+
+#dadospessoaisbk{
+    background-color: rgb(255, 255, 255);
+}
+label{
+  display: block;
+  clear: left;
+  font-size: 14px;
+}
+    </style>
 </head>
 <body>
     <script>
@@ -34,7 +63,6 @@
         }
     </script>
       <audio id="ei-cabalo" src="Ei-cabalo.mp3"></audio>
-
       <script>
         function play2() {
           var audio = document.getElementById("bruno");
@@ -42,7 +70,6 @@
         }
     </script>
       <audio id="bruno" src="Ultimo a sair Bruno e Sónia Balacó _gostas de carne__-[AudioTrimmer.com].mp3"></audio>
-
       <script>
         function play3() {
           var audio = document.getElementById("ohPrimasNao");
@@ -64,82 +91,103 @@
         }
     </script>
       <audio id="xódrogado" src="Xô drogado.mp3"></audio>
-    
-    <div class="container">
 
+      <div class="Header">
         <h1 class="text-center">Novo Paciente</h1>
-        
+      </div>
+    <div class="container">
+    
         <br>
         <form>
-
-            <label> Primeiro Nome </label>         
-            <input type="text" name="firstName" size="15" id="firstName"/>
-
-            <label> Ultimo Nome </label>     
-            <input type="text" name="lastName" size="15" id="lastName"/> 
-
-            <label> Idade </label>     
-            <input type="text" name="idade" size="15" id="idade"/> 
-
-            <label> Email </label>         
-            <input type="text" name="email" size="15" id="email"/> 
-
-            <label> Phone </label>
-            <input type="text" name="phone" size="15" id="phone"/> 
-
-            <label> Profissão </label>
-            <input type="text" name="profissao" size="15" id="profissao"/> 
-
-            <h4>Sexo</h4>
-            <select class="custom-select" id="sexo">
-                <option selected>Escolha uma opção...</option>
-                <option value="M">Masculino</option>
-                <option value="F">Feminino</option>
-                <option value="NS">Sim</option>
-              </select>           
-
             
-            <h3>Dados clinicos</h3>
-
-            <label> Patologias </label>
-            <input type="text" name="p1" size="15" id="patologias"/>
-
-            <br>
-
-            <label> Que número calça? </label>
-            <input type="text" name="p2" size="15" id="numeroPe"/>
-
-            <h4>Signo</h4>
-            <select class="custom-select" id="signo">
-                <option selected>Escolha uma opção...</option>
-                <option value="1">Aquário</option>
-                <option value="2">Balança</option>
-                <option value="3">Caranguejo</option>
-                <option value="4">Capricornio</option>
-                <option value="5">Carneiro</option>
-                <option value="6">Escorpião</option>
-                <option value="7">Gustavos</option>
-                <option value="8">Leão</option>
-                <option value="9">Sagitário</option>
-                <option value="10">Peixes</option>
-                <option value="11">Touro</option>
-                <option value="12">Virgem</option>
-              </select>
-
-            <h4>Uso de medicamentos</h4>
-            <div class="form-check">
-                <label class="form-check-label" for="meds"></label>
-                <input id="meds_sim" class="form-check-input" type="radio" name="meds" value="1">
-                Sim
-                </label>
-                <label class="form-check-label" for="meds"></label>
-                <input id="meds_nao" class="form-check-input" type="radio" name="meds" value="0" checked>
-                Não
-                </label>
+            <h3 class="col-md-12 mb-3">Dados Pessoais</h3>
+            <div class="form-row" id="dadospessoaisbk">
+                <div class="col-md-4 mb-3">
+                <label> Primeiro Nome </label>         
+                <input type="text" name="firstName" size="15" id="firstName" class="form-control"/>
+                </div>
+                <div class="col-md-4 mb-3">
+                <label> Ultimo Nome </label>     
+                <input type="text" name="lastName" size="15" id="lastName" class="form-control"/> 
+                </div>
+                <div class="col-md-4 mb-3">
+                <label> Idade </label>     
+                <input type="text" name="idade" size="15" id="idade" class="form-control"/> 
+                </div>
+                <div class="col-md-4 mb-3">
+                <label> Email </label>         
+                <input type="text" name="email" size="15" id="email" class="form-control"/> 
+                </div>
+                <div class="col-md-4 mb-3   ">
+                <label> Telemovel </label>
+                <input type="text" name="phone" size="15" id="phone" class="form-control"/> 
+                </div>
+                <div class="col-md-4 mb-3">
+                <label> Profissão </label>
+                <input type="text" name="profissao" size="15" id="profissao" class="form-control"/>
             </div>
+                <label for="Sexo">Sexo</label>
+                <select class="custom-select" id="sexo"><br>
+                    <option selected>Escolha uma opção...</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                    <option value="NS">Sim</option>
+                </select> 
+                
+
+                </div>
+        
+        
+            <h3>Dados Clinicos</h3>
+            
+                <div class="block col-md-4 mb-3">
+                   <label> Patologias </label>
+                    <input type="text" name="p1" size="15" id="patologias" class="col-md-4 mb-3 form-control"/>
+                    <br>
+                </div>    
+                <div class="block col-md-4 mb-3">
+                    <label> Que número calça? </label>
+                    <input type="text" name="p2" size="15" id="numeroPe" class="form-control"/>
+                </div>
+            
+                <div class="block " style="float: left;">
+                    <label>Signo</label><p>
+                    <select class="block custom-select" id="signo" class="form-control">
+                        <option selected>Escolha uma opção...</option>
+                        <option value="1">Aquário</option>
+                        <option value="2">Balança</option>
+                        <option value="3">Caranguejo</option>
+                        <option value="4">Capricornio</option>
+                        <option value="5">Carneiro</option>
+                        <option value="6">Escorpião</option>
+                        <option value="7">Gustavos</option>
+                        <option value="8">Leão</option>
+                        <option value="9">Sagitário</option>
+                        <option value="10">Peixes</option>
+                        <option value="11">Touro</option>
+                        <option value="12">Virgem</option><br>
+                    </p></select>
+                    <br>
+                </div>
+            
+                    <div class="block">
+                        <p><br></p>
+                        <h4>
+                        <label>Uso de medicamentos</h4></label>
+                        <div class="block form-check">
+                        <label class="block form-check-label" for="meds"></label>
+                        <input id="meds_sim" class="form-check-input" type="radio" name="meds" value="1">
+                        Sim
+                        </label>
+                        <label class="block form-check-label" for="meds"></label>
+                        <input id="meds_nao" class="form-check-input" type="radio" name="meds" value="0" checked>
+                        Não
+                        </label>
+                    </div>
+                </div>
 
             <h4>É sexualmente activo?</h4>
-            <div class="form-check">
+            <div class="block form-check">
                 <label class="form-check-label" for="sexoActivo"></label>
                 <input class="form-check-input" type="radio" name="sexoActivo" value="1" onclick="play()">
                 Sim
@@ -148,7 +196,6 @@
                 <input class="form-check-input" type="radio" name="sexoActivo" value="0" checked>
                 Não
                 </label>
-
                 <select class="custom-select" id="sexoSemana">
                     <option selected>Quantas vezes por semana?</option>
                     <option value="0">0</option>
@@ -163,17 +210,15 @@
                     <option value="9">Não exagere...</option>
                   </select>
             </div>
-
             <h4>Quantos parceiros já teve?</h4>
             <select class="custom-select" id="parceiros" onclick="play3()">
                 <option selected>Escolha uma opção...</option>
                 <option value="1">Mão</option>
-                <option value="2" >0-2</option>
+                <option value="2" onclick="play3()" >0-2</option>
                 <option value="3">2-6</option>
                 <option value="4">7-10</option>
                 <option value="5">Mais de 10</option>
               </select>
-
             <h4>Já praticou relações sexuais de forma não católica? (Sexo anal passivo)</h4>
             <div class="form-check">
                 <label class="form-check-label" for="anal"></label>
@@ -181,7 +226,6 @@
                 Sim
                 </label>
             </div>
-
             <h4>Usa proteção?</h4>
             <div class="form-check">
                 <select class="custom-select" id="protecao">
@@ -192,10 +236,8 @@
                     <option value="3">Jogo LoL</option>
                   </select>
             </div>
-
             <label> Onde fica o Clitóris? </label>
             <input type="text" name="p4" size="30" id="clitoris" placeholder="O que é isso?"/>
-
             <h4>Número de bebidas alcoólicas consumidas por semana (copo)?</h4>
             <select class="custom-select" id="bebidas">
                 <option selected>Escolha uma opção...</option>
@@ -203,14 +245,12 @@
                 <option value="2">2-6</option>
                 <option value="3">Mais de 6</option>
               </select>
-
             <h4>É fumador?</h4>
             <select class="custom-select" id="smoker">
                 <option selected>Escolha uma opção...</option>
                 <option value="0">Não</option>
                 <option value="1">Sim</option>
               </select>
-
             <h4>Número de cigarros por dia?</h4>
             <div class="form-check">
                 <label class="form-check-label" for="cigars"></label>
@@ -230,8 +270,6 @@
                 20+
                 </label>
             </div>
-            
-
             <h4>Consome estupefacientes?</h4>
             <div class="form-check">
                 <label class="form-check-label" for="drugs"></label>
@@ -244,7 +282,6 @@
                 </label>
             </div>
             <input type="text" name="p9" size="30" id="quais" placeholder="Quais?"/>
-
             <h4>Foi lhe oferecido por parte do namorado/a um par de cornos?</h4>
             <div class="form-check">
                 <label class="form-check-label" for="cornos"></label>
@@ -252,7 +289,7 @@
                 Sim!
                 </label>
                 <label class="form-check-label" for="cornos"></label>
-                <input id="cor_2" class="form-check-input" type="radio" name="cornos" value="2" onclick="play4()" >
+                <input id="cor_2" class="form-check-input" type="radio" name="cornos" value="2"  onclick="play4()" >
                 Não
                 </label>
                 <label class="form-check-label" for="cornos"></label>
@@ -260,7 +297,6 @@
                 Já perdi a conta
                 </label>
             </div>
-
             <h3>Hábitos Alimentares</h3>
             <h4>Regime alimentar</h4>
             <div class="form-check">
@@ -281,13 +317,8 @@
                 Outro
                 </label>
             </div>
-
-
-        </form>  
-
+        </form>
         <br>
-        <button type="button" class="btn btn-add" id="btn-add">Add</button>
+        <button type="button" class="btn btn-success" id="btn-add">Adicionar</button>
     </div>
-    
-
 </body>

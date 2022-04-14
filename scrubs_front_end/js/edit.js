@@ -46,7 +46,7 @@ $(document).ready(function() {
 
 $(document).on("click", "#btn-edit", function(){
     edit(id);
-    //window.location.assign("index.html")
+    window.location.assign("index.html")
 });
 
 function fetchCustomerbyId(){

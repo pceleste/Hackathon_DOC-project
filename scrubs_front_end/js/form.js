@@ -36,6 +36,6 @@ function add() {
          } ),
         async: true,
         contentType: "application/json",
-        success: window.location.assign("index.html")
+        success: console.log($('input[name="cornos"]:checked').val())//window.location.assign("index.html")
     });
 }
