@@ -46,7 +46,6 @@ $(document).ready(function() {
 
 $(document).on("click", "#btn-edit", function(){
     edit(id);
-    console.log("CENAS")
     //window.location.assign("index.html")
 });
 
