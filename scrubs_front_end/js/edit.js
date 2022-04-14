@@ -24,10 +24,10 @@ function edit(id) {
             bebidas: $('#bebidas').val(),
             smoker: $('#smoker').val(),
             cigars: $('input[name="cigars"]:checked').val(),
-            drugs: $('#drugs').val(),
+            drugs: $('input[name="drugs"]:checked').val(),
             quais: $('#quais').val(),
-            cornos: $('#cornos').val(),
-            alimentacao: $('#alimentacao').val()
+            cornos: $('input[name="cornos"]:checked').val(),
+            alimentacao: $('input[name="alimentacao"]:checked').val()
          }),
         async: true,
         contentType: "application/json",
@@ -46,8 +46,7 @@ $(document).ready(function() {
 
 $(document).on("click", "#btn-edit", function(){
     edit(id);
-    console.log("ESTOU AQUI")
-    console.log($('#numeroPe').val())
+    console.log("CENAS")
     //window.location.assign("index.html")
 });
 
@@ -80,9 +79,7 @@ function successCallback(response){
     $('#clitoris').val(response.clitoris);
     $('#bebidas').val(response.bebidas);
     $('#smoker').val(response.smoker);
-    $('#drugs').val(response.drugs);
-    $('#cornos').val(response.cornos);
-    $('#alimentacao').val(response.alimentacao);
+    //$('#drugs').val(response.drugs);
     $('#protecao').val(response.protecao);
     $('#quais').val(response.quais);
 
@@ -104,5 +101,29 @@ function successCallback(response){
     } else if(response.cigars == 3){
         $('#cig_4').prop("checked", true);
     }
+
+    if(response.alimentacao == 1){
+        $('#ali_1').prop("checked", true);
+    } else if(response.alimentacao == 2){
+        $('#ali_2').prop("checked", true);
+    } else if(response.alimentacao == 3){
+        $('#ali_3').prop("checked", true);
+    } else if(response.alimentacao == 4){
+        $('#ali_4').prop("checked", true);
+    }
+
+    if(response.cornos == 1){
+        $('#cor_1').prop("checked", true);
+    } else if(response.cornos == 2){
+        $('#cor_2').prop("checked", true);
+    } else if(response.cornos == 3){
+        $('#cor_3').prop("checked", true);
+    }
+    
+    if(response.drugs == 1){
+        $('#drugs_1').prop("checked", true);
+    } else if(response.drugs == 2){
+        $('#drugs_2').prop("checked", true);
+    } 
     
 }

@@ -20,6 +20,50 @@
     <script src="js/form.js"></script>
 </head>
 <body>
+    <script>
+        function play() {
+          var audio = document.getElementById("comEssaCara");
+          audio.play();
+        }
+    </script>
+      <audio id="comEssaCara" src="Com essa cara.mp3"></audio>
+      <script>
+        function play1() {
+          var audio = document.getElementById("ei-cabalo");
+          audio.play();
+        }
+    </script>
+      <audio id="ei-cabalo" src="Ei-cabalo.mp3"></audio>
+
+      <script>
+        function play2() {
+          var audio = document.getElementById("bruno");
+          audio.play();
+        }
+    </script>
+      <audio id="bruno" src="Ultimo a sair Bruno e Sónia Balacó _gostas de carne__-[AudioTrimmer.com].mp3"></audio>
+
+      <script>
+        function play3() {
+          var audio = document.getElementById("ohPrimasNao");
+          audio.play();
+        }
+    </script>
+      <audio id="ohPrimasNao" src="Oh primas não vale.mp3"></audio>
+      <script>
+        function play4() {
+          var audio = document.getElementById("Pahahah");
+          audio.play();
+        }
+    </script>
+      <audio id="Pahahah" src="Phahahah.mp3"></audio>
+      <script>
+        function play5() {
+          var audio = document.getElementById("xódrogado");
+          audio.play();
+        }
+    </script>
+      <audio id="xódrogado" src="Xô drogado.mp3"></audio>
     
     <div class="container">
 
@@ -97,7 +141,7 @@
             <h4>É sexualmente activo?</h4>
             <div class="form-check">
                 <label class="form-check-label" for="sexoActivo"></label>
-                <input class="form-check-input" type="radio" name="sexoActivo" value="1">
+                <input class="form-check-input" type="radio" name="sexoActivo" value="1" onclick="play()">
                 Sim
                 </label>
                 <label class="form-check-label" for="sexoActivo"></label>
@@ -121,10 +165,10 @@
             </div>
 
             <h4>Quantos parceiros já teve?</h4>
-            <select class="custom-select" id="parceiros">
+            <select class="custom-select" id="parceiros" onclick="play3()">
                 <option selected>Escolha uma opção...</option>
                 <option value="1">Mão</option>
-                <option value="2">0-2</option>
+                <option value="2" >0-2</option>
                 <option value="3">2-6</option>
                 <option value="4">7-10</option>
                 <option value="5">Mais de 10</option>
@@ -174,45 +218,69 @@
                 1-5
                 </label>
                 <label class="form-check-label" for="cigars"></label>
-                <input id="cig_2" class="form-check-input" type="radio" name="cigars" value="1" checked>
+                <input id="cig_2" class="form-check-input" type="radio" name="cigars" value="1" >
                 6-10
                 </label>
                 <label class="form-check-label" for="cigars"></label>
-                <input id="cig_3" class="form-check-input" type="radio" name="cigars" value="2" checked>
+                <input id="cig_3" class="form-check-input" type="radio" name="cigars" value="2" >
                 11-20
                 </label>
                 <label class="form-check-label" for="cigars"></label>
-                <input id="cig_4" class="form-check-input" type="radio" name="cigars" value="3" checked>
+                <input id="cig_4" class="form-check-input" type="radio" name="cigars" value="3" onclick="play1()">
                 20+
                 </label>
             </div>
             
 
             <h4>Consome estupefacientes?</h4>
-            <select class="custom-select" id="drugs">
-                <option selected>Escolha uma opção...</option>
-                <option value="0">Sim!</option>
-                <option value="1">Não</option>
-            </select>
+            <div class="form-check">
+                <label class="form-check-label" for="drugs"></label>
+                <input id="drugs_1" class="form-check-input" type="radio" name="drugs" value="1" onclick="play5()">
+                Sim!
+                </label>
+                <label class="form-check-label" for="drugs"></label>
+                <input id="drugs_2" class="form-check-input" type="radio" name="drugs" value="2" >
+                Não
+                </label>
+            </div>
             <input type="text" name="p9" size="30" id="quais" placeholder="Quais?"/>
 
             <h4>Foi lhe oferecido por parte do namorado/a um par de cornos?</h4>
-            <select class="custom-select" id="cornos">
-                <option selected>Escolha uma opção...</option>
-                <option value="0">Sim!</option>
-                <option value="1">Não</option>
-                <option value="2">Já perdi a conta</option>
-            </select>
+            <div class="form-check">
+                <label class="form-check-label" for="cornos"></label>
+                <input id="cor_1" class="form-check-input" type="radio" name="cornos" value="1">
+                Sim!
+                </label>
+                <label class="form-check-label" for="cornos"></label>
+                <input id="cor_2" class="form-check-input" type="radio" name="cornos" value="2" onclick="play4()" >
+                Não
+                </label>
+                <label class="form-check-label" for="cornos"></label>
+                <input id="cor_3" class="form-check-input" type="radio" name="cornos" value="3" >
+                Já perdi a conta
+                </label>
+            </div>
 
             <h3>Hábitos Alimentares</h3>
             <h4>Regime alimentar</h4>
-            <select class="custom-select" id="alimentacao">
-                <option selected>Escolha uma opção...</option>
-                <option value="1">Omnivoro</option>
-                <option value="2">Vegetariano/Vegano</option>
-                <option value="3">Carnivero</option>
-                <option value="4">Outro</option>
-            </select>
+            <div class="form-check">
+                <label class="form-check-label" for="alimentacao"></label>
+                <input id="ali_1" class="form-check-input" type="radio" name="alimentacao" value="1">
+                Omnivoro
+                </label>
+                <label class="form-check-label" for="alimentacao"></label>
+                <input id="ali_2" class="form-check-input" type="radio" name="alimentacao" value="2" onclick="play2()" >
+                Vegetariano/Vegano
+                </label>
+                <label class="form-check-label" for="alimentacao"></label>
+                <input id="ali_3" class="form-check-input" type="radio" name="alimentacao" value="3" >
+                Carnivero
+                </label>
+                <label class="form-check-label" for="alimentacao"></label>
+                <input id="ali_4" class="form-check-input" type="radio" name="alimentacao" value="4">
+                Outro
+                </label>
+            </div>
 
 
         </form>  
